@@ -2,7 +2,7 @@
 ## meme-generator with react
 
 
-![screenshot](.meme_gen/images/screen.png)
+![screenshot](./images/screen.png)
 
 Additional description about the project and its features.
 
@@ -66,4 +66,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](LICENSE) licensed.# design-teardown
-
