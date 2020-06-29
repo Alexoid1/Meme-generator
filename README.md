@@ -11,7 +11,7 @@ Additional description about the project and its features.
 - HTML,
 - CSS,
 - REACT
-
+- API (imgflip)
 ## Live Demo
 
 [Live Demo Link](https://memegenerator2.herokuapp.com/)
