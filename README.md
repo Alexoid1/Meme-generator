@@ -29,7 +29,7 @@ Additional description about the project and its features.
 
 
 In this project:
-- Using publiC API
+- Using publiC API (imgflip)
 - Diferent react component for every element on the app
 - HTML and CSS.
 
