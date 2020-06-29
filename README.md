@@ -26,6 +26,12 @@ Additional description about the project and its features.
 **Navigation bar**
 - Go to (https://memegenerator2.herokuapp.com/) and have a look around. 
 
+**Terminal**
+- cd into the repo folder. 
+- npm start
+
+
+
 In this project:
 - Using publiC API
 - Diferent react component for every element on the app
@@ -38,7 +44,6 @@ To get a local copy  and to set it up and running follow these simple example st
 
 - Browser
 - Internet
-
 - Download the code from repository (https://github.com/Alexoid1/Meme-generatorn)
 
 
