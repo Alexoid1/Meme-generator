@@ -20,7 +20,7 @@ Additional description about the project and its features.
 ## Getting Started
 
 **Navigation bar**
-- Go to (https://memegenerator2.herokuapp.com/) and have a look around. 
+- Go to (https://alexoid1.github.io/Meme-generator/) and have a look around. 
 
 **Terminal**
 - cd into the repo folder. 
