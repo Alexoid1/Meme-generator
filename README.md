@@ -1,8 +1,8 @@
 # Meme-generator
 ## meme-generator with react
 
-![screenshot](./meme_gen/images/screen2.png)
-![screenshot](./meme_gen/images/screen.png)
+![screenshot](./images/screen2.png)
+![screenshot](./images/screen.png)
 
 Additional description about the project and its features.
 

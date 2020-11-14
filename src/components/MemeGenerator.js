@@ -1,4 +1,5 @@
 import React from 'react';
+import './MemeGenerator.css'
 
 class MemeGenerator extends React.Component{
     constructor(){
