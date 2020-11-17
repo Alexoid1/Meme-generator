@@ -14,7 +14,7 @@ Additional description about the project and its features.
 - API (imgflip)
 ## Live Demo
 
-[Live Demo Link](https://memegenerator2.herokuapp.com/)
+[Live Demo Link](https://alexoid1.github.io/Meme-generator/)
 
 
 ## Getting Started
