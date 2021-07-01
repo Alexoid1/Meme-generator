@@ -12,6 +12,7 @@ Additional description about the project and its features.
 - CSS,
 - REACT
 - API (imgflip)
+- TypeScript
 ## Live Demo
 
 [Live Demo Link](https://alexoid1.github.io/Meme-generator/)
