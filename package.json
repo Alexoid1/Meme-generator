@@ -2,16 +2,21 @@
   "name": "meme_generator",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://Alexoid1.github.io/meme-generator",
+  "homepage": "https://Alexoid1.github.io/meme-generator",
   "dependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.5",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
     "gh-pages": "^3.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "typescript": "^3.9.10"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
