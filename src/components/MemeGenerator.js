@@ -1,58 +1,67 @@
 import React from 'react';
-import './MemeGenerator.css'
+import './MemeGenerator.css';
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 
-class MemeGenerator extends React.Component{
-    constructor(){
-        super()
-        this.state={
+var MemeGenerator = /** @class */ (function (_super) {
+    __extends(MemeGenerator, _super);
+    function MemeGenerator() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
             topText: "",
             bottomText: "",
             randomImg: "http://i.imgflip.com/1bij.jpg",
             allMemeImgs: []
-
-        }
-        this.handleChange=this.handleChange.bind(this)
-        this.handleSubmit=this.handleSubmit.bind(this)
+        };
+        _this.handleChangeTop = function (event) {
+            _this.setState({ topText: event.target.value });
+        };
+        _this.handleChangeBot = function (event) {
+            _this.setState({ bottomText: event.target.value });
+        };
+        _this.handleSubmit = function (event) {
+            event.preventDefault();
+            var randNum = Math.floor(Math.random() * _this.state.allMemeImgs.length);
+            var randMemeImg = _this.state.allMemeImgs[randNum].url;
+            _this.setState({ randomImg: randMemeImg });
+        };
+        return _this;
     }
-    componentDidMount() {
+    MemeGenerator.prototype.componentDidMount = function () {
+        var _this = this;
         fetch("https://api.imgflip.com/get_memes")
-            .then(response => response.json())
-            .then(response => {
-                const {memes} = response.data
-                
-                this.setState({ allMemeImgs: memes })
-            })
-    }
-    handleChange(event) {
-        const {name, value} = event.target
-        this.setState({ [name]: value })
-        
-    }
-    handleSubmit(event) {
-        event.preventDefault()
-        const randNum = Math.floor(Math.random() * this.state.allMemeImgs.length)
-        const randMemeImg = this.state.allMemeImgs[randNum].url
-        this.setState({randomImg:randMemeImg})
-    }
-
-        render() {
-            return(
-                <div>
-                    <form className="meme-form">
-                        <input name='topText' type='text' placeholder='Top Text' value={this.state.topText} onChange={this.handleChange}/>
-                        
-                        <input name='bottomText' type='text' placeholder='Bottom Text' value={this.state.bottomText} onChange={this.handleChange}/>
-                        
-                        <button onClick={this.handleSubmit}>Gen</button>
-                    </form>
-                    <div className="meme">
-                        <img src={this.state.randomImg} alt="" />
-                        <h2 className="top">{this.state.topText}</h2>
-                        <h2 className="bottom">{this.state.bottomText}</h2>
-                    </div>                   
-                </div>
-            )
-        }
-    
-}
-export default MemeGenerator
+            .then(function (response) { return response.json(); })
+            .then(function (response) {
+            var memes = response.data.memes;
+            _this.setState({ allMemeImgs: memes });
+        });
+    };
+    MemeGenerator.prototype.render = function () {
+        var _this = this;
+        return (React.createElement("div", null,
+            React.createElement("form", { className: "meme-form" },
+                React.createElement("input", { name: 'topText', type: 'text', placeholder: 'Top Text', value: this.state.topText, onChange: function (e) { return _this.handleChangeTop(e); } }),
+                React.createElement("input", { name: 'bottomText', type: 'text', placeholder: 'Bottom Text', value: this.state.bottomText, onChange: function (e) { return _this.handleChangeBot(e); } }),
+                React.createElement("button", { onClick: this.handleSubmit }, "Gen")),
+            React.createElement("div", { className: "meme" },
+                React.createElement("img", { src: this.state.randomImg, alt: "" }),
+                React.createElement("h2", { className: "top" }, this.state.topText),
+                React.createElement("h2", { className: "bottom" }, this.state.bottomText))));
+    };
+    return MemeGenerator;
+}(React.Component));
+export default MemeGenerator;
+//# sourceMappingURL=MemeGenerator.js.map
