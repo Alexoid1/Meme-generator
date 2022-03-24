@@ -13,6 +13,7 @@ Additional description about the project and its features.
 - REACT
 - API (imgflip)
 - TypeScript
+- Cypress
 ## Live Demo
 
 [Live Demo Link](https://alexoid1.github.io/Meme-generator/)
