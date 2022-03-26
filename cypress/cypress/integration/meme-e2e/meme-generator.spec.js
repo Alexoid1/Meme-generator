@@ -61,7 +61,7 @@ describe('example to-do app', () => {
 
     cy.get('img').invoke('attr', 'src').then((fi)=>{
       if(fi!==image){
-        console.log('image change')
+        cy.log('image change')
       }
       
     })
